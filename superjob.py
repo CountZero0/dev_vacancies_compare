@@ -23,8 +23,6 @@ def get_sj_language_stat(language, superjob_token):
     vacancies = 0
 
     while more:
-        payload['page'] = page
-        page += 1
         response = requests.get('https://api.superjob.ru/2.0/vacancies',
                                 params=payload, headers=headers)
         response.raise_for_status()
