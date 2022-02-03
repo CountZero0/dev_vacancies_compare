@@ -37,7 +37,7 @@ def get_sj_language_stat(language, superjob_token):
 
         page += 1
 
-    if vacancies_processed != 0:
+    if vacancies_processed:
         average_salary = int(salary_total / vacancies_processed)
     vacancies_found = vacancies['total']
     return vacancies_processed, average_salary, vacancies_found
